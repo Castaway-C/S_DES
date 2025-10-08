@@ -172,8 +172,6 @@ class SDesGUI:
         ttk.Button(btn_frame, text="解密", command=self.basic_decrypt,
                    width=15).pack(side=tk.LEFT, padx=10)
 
-        ttk.Separator(card).grid(row=5, column=0, columnspan=2, sticky=tk.EW, pady=15)
-
         note_frame = ttk.Frame(card, style="Card.TFrame")
 
         card.columnconfigure(1, weight=1)
@@ -473,4 +471,5 @@ class SDesGUI:
             closed_test(plaintext, self.test_result, progress_callback)
         finally:
             complete_callback()
+
             self.root.after(0, lambda: self.test_result.insert(tk.END, "\n分析完成！"))
