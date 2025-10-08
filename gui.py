@@ -172,8 +172,6 @@ class SDesGUI:
         ttk.Button(btn_frame, text="解密", command=self.basic_decrypt,
                    width=15).pack(side=tk.LEFT, padx=10)
 
-        note_frame = ttk.Frame(card, style="Card.TFrame")
-
         card.columnconfigure(1, weight=1)
 
     def init_ascii_tab(self):
@@ -473,3 +471,4 @@ class SDesGUI:
             complete_callback()
 
             self.root.after(0, lambda: self.test_result.insert(tk.END, "\n分析完成！"))
+
